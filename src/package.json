@@ -10,7 +10,10 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-nodemon": "^2.0.4"
+    "gulp-mocha": "^2.2.0",
+    "gulp-nodemon": "^2.0.4",
+    "should": "^7.1.1",
+    "sinon": "^1.17.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
