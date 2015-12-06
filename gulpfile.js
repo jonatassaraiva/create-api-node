@@ -2,7 +2,7 @@ var gulp = require('gulp'),
 	gulpNodemon = require('gulp-nodemon'),
 	gulpMocha = require('gulp-mocha');
 
-gulp.task('default', function () {
+gulp.task('run-nodemon', function () {
 	gulpNodemon({
 		script: 'src/app.js',
 		ext: 'js',

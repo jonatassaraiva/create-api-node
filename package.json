@@ -16,8 +16,7 @@
     "sinon": "^1.17.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp"
+    "gulp-nodemon": "gulp run-nodemon"
   },
   "repository": {
     "type": "git",
