@@ -9,8 +9,8 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var bookRouter = require('./routes/booksRoute')(require('./modules/bookModel'));
-app.use('/api', bookRouter);
+var bookRouter = require('./routes/bookRoutes')(require('./modules/bookModel'));
+app.use('/api/books', bookRouter); 
 
 app.get('/', function (req, res) {
 	res.send('Welcome to API');
