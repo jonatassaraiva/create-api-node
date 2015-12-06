@@ -1,2 +1,7 @@
-# create-api-node
-create-api-nodejs
+API in Node
+===========
+Start
+
+    > npm install src/
+    > node src/app.js
+
