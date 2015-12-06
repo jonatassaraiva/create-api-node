@@ -1,17 +1,23 @@
 /* global process */
 var express = require('express'),
-	mongoose = require('mongoose');
+	mongoose = require('mongoose'),
+	bodyParser = require('body-parser');
+
+var app = express();
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
 
 var db = mongoose.connect('mongodb://localhost/bookAPI');
 var Book = require('./modules/bookModel');
 
-var app = express();
-
-var port = process.env.PORT || 3000;
-
 var bookRouter = express.Router();
-
 bookRouter.route('/books')
+	.post(function(req, rep){
+		var book = new Book(req.body);
+		book.save();
+		
+		rep.status(201).send(book);
+	})
 	.get(function (req, rep) {
 
 		var query = {};
@@ -37,13 +43,14 @@ bookRouter.route('/books/:bookId')
 				rep.json(book);
 		});
 	});
-
+	
 app.use('/api', bookRouter);
 
 app.get('/', function (req, res) {
 	res.send('Welcome to API');
 });
 
+var port = process.env.PORT || 3000;
 app.listen(port, function () {
 	console.log('Gulp is running API on localhost:' + port);
 });
