@@ -8,3 +8,7 @@ Start
 Start using [gulp-nodemon](https://github.com/remy/nodemon)
 
     > npm run gulp 
+
+Database
+
+ - Import Book data into your mongoDB database. Run 'mongo bookAPI < booksJson.js' from the command line.

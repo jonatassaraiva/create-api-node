@@ -1,5 +1,9 @@
 /* global process */
-var express = require('express');
+var express = require('express'),
+	mongoose = require('mongoose');
+
+var db = mongoose.connect('mongodb://localhost/bookAPI');
+var Book = require('./modules/bookModel');
 
 var app = express();
 
@@ -9,11 +13,12 @@ var bookRouter = express.Router();
 
 bookRouter.route('/books')
 	.get(function (req, rep) {
-		var responseJson = {
-			hellow: 'This is json response'
-		};
-		
-		rep.json(responseJson);
+		Book.find(function(err, books){
+			if(err)
+				rep.status(500).send(err);
+			else
+				rep.json(books);
+		});
 	});
 
 app.use('/api', bookRouter);
