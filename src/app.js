@@ -15,15 +15,26 @@ bookRouter.route('/books')
 	.get(function (req, rep) {
 
 		var query = {};
-		
-		if(req.query.genre || req.query.author)
+
+		if (req.query.genre || req.query.author)
 			query = req.query;
-		
-		Book.find(query, function(err, books){
-			if(err)
+
+		Book.find(query, function (err, books) {
+			if (err)
 				rep.status(500).send(err);
 			else
 				rep.json(books);
+		});
+	});
+
+bookRouter.route('/books/:bookId')
+	.get(function (req, rep) {
+
+		Book.findById(req.params.bookId, function (err, book) {
+			if (err)
+				rep.status(500).send(err);
+			else
+				rep.json(book);
 		});
 	});
 
