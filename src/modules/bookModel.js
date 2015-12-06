@@ -6,6 +6,6 @@ var bookModel = new Schema({
 	author: { type: String },
 	genre: { type: String },
 	read: { type: Boolean, default: false }
-},{ versionKey: false });
+}, { versionKey: false });
 
 module.exports = mongoose.model('book', bookModel);
