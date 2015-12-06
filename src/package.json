@@ -1,0 +1,22 @@
+{
+  "name": "create-api-node",
+  "version": "1.0.0",
+  "description": "Create API Node",
+  "main": "api.js",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonatassaraiva/create-api-node.git"
+  },
+  "author": "Jonatas Saraiva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonatassaraiva/create-api-node/issues"
+  },
+  "homepage": "https://github.com/jonatassaraiva/create-api-node#readme"
+}
