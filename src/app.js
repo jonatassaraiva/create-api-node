@@ -10,5 +10,5 @@ app.get('/', function(req, res){
 });
 
 app.listen(port, function(){
-	console.log('Running on localhost:'+port);
+	console.log('Gulp is running API on localhost:'+port);
 });
