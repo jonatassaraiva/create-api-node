@@ -1,5 +1,7 @@
 API in Node
 ===========
+[![Build Status](https://travis-ci.org/jonatassaraiva/create-api-node.svg?branch=master)](https://travis-ci.org/jonatassaraiva/create-api-node)
+
 Start
 
     > npm install
