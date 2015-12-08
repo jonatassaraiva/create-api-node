@@ -31,6 +31,4 @@ gulp.task('integrationTests', function () {
 		});
 });
 
-gulp.task('ci', ['unitTests', 'integrationTests']);
-
 	
