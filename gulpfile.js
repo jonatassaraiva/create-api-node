@@ -17,12 +17,12 @@ gulp.task('run-nodemon', function () {
 	});
 });
 
-gulp.task('unitTest', function () {
+gulp.task('unitTests', function () {
 	gulp.src('src/tests/units/*.js', { read: false })
         .pipe(gulpMocha({ reporter: 'spec' }));
 });
 
-gulp.task('integrationsTest', function () {
+gulp.task('integrationTests', function () {
 	gulpEnv({ vars: { ENV: 'IntegrationTests' } });
 	gulp.src('src/tests/integrations/*.js', { read: false })
         .pipe(gulpMocha({ reporter: 'spec' }))

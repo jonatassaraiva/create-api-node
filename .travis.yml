@@ -7,5 +7,5 @@ services:
   - mongodb
 
 script:
-  - gulp unitTest
-  - gulp integrationsTest
+  - gulp unitTests
+  - gulp integrationTests
