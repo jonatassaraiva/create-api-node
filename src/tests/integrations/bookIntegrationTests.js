@@ -17,7 +17,7 @@ describe('Book crud test', function () {
 			.send(bookPost)
 			.expect(201)
 			.end(function (err, res) {
-				res.body.read.should.equal(false);
+				res.body.read.should.equal(true);
 				res.body.should.have.property('_id');
 				_id = res.body._id;
 				done();
