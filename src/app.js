@@ -6,7 +6,7 @@ var express = require('express'),
 var db;
 
 if (process.env.ENV == 'IntegrationTests')
-	db = mongoose.connect('mongodb://localhost/bookAPI_IntegrationTests');
+	db = mongoose.connect('mongodb://localhost/bookAPI_integrationTests');
 else
 	db = mongoose.connect('mongodb://localhost/bookAPI');
 
