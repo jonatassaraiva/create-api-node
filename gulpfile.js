@@ -19,13 +19,13 @@ gulp.task('run-nodemon', function () {
 
 gulp.task('unitTests', function () {
 	gulp.src('src/tests/units/*.js', { read: false })
-        .pipe(gulpMocha({ reporter: 'list' }));
+        .pipe(gulpMocha({ reporter: 'spec' }));
 });
 
 gulp.task('integrationTests', function () {
 	gulpEnv({ vars: { ENV: 'IntegrationTests' } });
 	gulp.src('src/tests/integrations/*.js', { read: false })
-        .pipe(gulpMocha({ reporter: 'list' }))
+        .pipe(gulpMocha({ reporter: 'spec' }))
 		.on('end', function(){
 			process.exit();
 		});
