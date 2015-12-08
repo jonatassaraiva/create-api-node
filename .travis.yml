@@ -4,4 +4,4 @@ node_js:
 services:
   - mongodb
  script:
-  - gulp integrationsTest
+  - "gulp integrationsTest"
