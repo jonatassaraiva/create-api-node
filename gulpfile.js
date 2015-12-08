@@ -17,8 +17,18 @@ gulp.task('run-nodemon', function () {
 	});
 });
 
-gulp.task('run-tests', function () {
-	gulpEnv({ vars: { ENV: 'IntegrationTests' } });
-	gulp.src('src/tests/*.js', { read: false })
+gulp.task('unitTest', function () {
+	gulp.src('src/tests/units/*.js', { read: false })
         .pipe(gulpMocha({ reporter: 'spec' }));
 });
+
+gulp.task('integrationsTest', function () {
+	gulpEnv({ vars: { ENV: 'IntegrationTests' } });
+	gulp.src('src/tests/integrations/*.js', { read: false })
+        .pipe(gulpMocha({ reporter: 'spec' }))
+		.on('end', function(){
+			process.exit();
+		});
+});
+
+	

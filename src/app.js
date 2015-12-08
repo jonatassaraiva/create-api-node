@@ -21,9 +21,11 @@ app.get('/', function (req, res) {
 	res.send('Welcome to API');
 });
 
+
 var port = process.env.PORT || 3000;
 app.listen(port, function () {
-	console.log('Gulp is running API on localhost:' + port);
+	console.log('Running API on localhost:' + port);
 });
+
 
 module.exports = app;

@@ -3,3 +3,5 @@ node_js:
   - "4.2"
 services:
   - mongodb
+ script:
+  - gulp integrationsTest
