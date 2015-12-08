@@ -6,5 +6,5 @@ node_js:
 services:
   - mongodb
 
- script:
+script:
   - gulp integrationsTest
