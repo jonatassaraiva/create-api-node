@@ -10,10 +10,12 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-env": "^0.2.0",
     "gulp-mocha": "^2.2.0",
     "gulp-nodemon": "^2.0.4",
     "should": "^7.1.1",
-    "sinon": "^1.17.2"
+    "sinon": "^1.17.2",
+    "supertest": "^1.1.0"
   },
   "scripts": {
     "test": "gulp run-tests",
