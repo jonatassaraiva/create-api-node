@@ -20,7 +20,7 @@ describe('Book crud test', function () {
 				if (err)
 					done(err);
 				else {
-					res.body.read.should.equal(true);
+					res.body.read.should.equal(false);
 					res.body.should.have.property('_id');
 					_id = res.body._id;
 					done();
