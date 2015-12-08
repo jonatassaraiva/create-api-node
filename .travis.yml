@@ -1,7 +1,10 @@
 language: node_js
+
 node_js:
   - "4.2"
+
 services:
   - mongodb
+
  script:
-  - "gulp integrationsTest"
+  - gulp integrationsTest
