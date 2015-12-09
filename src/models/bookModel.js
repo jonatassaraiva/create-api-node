@@ -8,4 +8,4 @@ var bookModel = new Schema({
     read: { type: Boolean, default: false }
 }, { versionKey: false });
 
-module.exports = mongoose.model("book", bookModel);
+module.exports = mongoose.model('book', bookModel);
