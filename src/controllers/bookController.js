@@ -24,7 +24,19 @@ var bookController = function (Book) {
             if (err)
                 res.status(500).send(err);
             else
-                res.json(books);
+            {
+                var returnBooks = [];
+                books.forEach(function(element) {
+                    var bookWithLinks = element.toJSON();
+                    bookWithLinks.links = {
+                        self: 'http://' + req.headers.host + '/api/books/' + element._id
+                    };
+                    
+                    returnBooks.push(bookWithLinks);
+                });
+                
+                res.json(returnBooks);                                
+            }
         });
     };
 
