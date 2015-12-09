@@ -35,8 +35,8 @@ gulp.task('integrationTests', function () {
 gulp.task('eslint', function () {
 	gulp.src('src/**/*.js')
         .pipe(gulpEslint())
-		.pipe(gulpEslint
-        .format());
+		.pipe(gulpEslint.format())
+        .pipe(gulpEslint.failAfterError());
 });
 
 	
