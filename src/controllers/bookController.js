@@ -54,7 +54,14 @@ var bookController = function (Book) {
     };
 
     var _getById = function (req, res) {
-        res.json(req.book);
+        var bookWithLinks = req.book.toJSON();
+     
+        bookWithLinks.links = {
+            filterByThisGenre: 'http://' + req.headers.host + '/api/books/?genre=' + req.book.genre.replace(/ /g, '%20'),
+            filterByThisAuthor: 'http://' + req.headers.host + '/api/books/?author=' + req.book.author.replace(/ /g, '%20')
+        };
+        
+        res.json(bookWithLinks);
     };
 
     var _put = function (req, res) {
