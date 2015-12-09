@@ -2,7 +2,8 @@ var gulp = require('gulp'),
 	gulpNodemon = require('gulp-nodemon'),
 	gulpMocha = require('gulp-mocha'),
 	gulpEnv = require('gulp-env'),
-	supertest = require('supertest');
+	supertest = require('supertest'),
+	gulpEslint = require('gulp-eslint');
 
 gulp.task('run-nodemon', function () {
 	gulpNodemon({
@@ -29,6 +30,13 @@ gulp.task('integrationTests', function () {
 		.on('end', function(){
 			process.exit();
 		});
+});
+
+gulp.task('eslint', function () {
+	gulp.src('src/**/*.js')
+        .pipe(gulpEslint())
+		.pipe(gulpEslint
+        .format());
 });
 
 	
