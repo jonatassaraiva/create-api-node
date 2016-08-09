@@ -1,4 +1,5 @@
 [![Stories in Ready](https://badge.waffle.io/jonatassaraiva/create-api-node.png?label=ready&title=Ready)](https://waffle.io/jonatassaraiva/create-api-node)
+[![Stories in Ready](https://badge.waffle.io/jonatassaraiva/create-api-node.png?label=ready&title=Ready)](https://waffle.io/jonatassaraiva/create-api-node)
 API in Node
 ===========
 [![Build Status](https://travis-ci.org/jonatassaraiva/create-api-node.svg?branch=master)](https://travis-ci.org/jonatassaraiva/create-api-node)
